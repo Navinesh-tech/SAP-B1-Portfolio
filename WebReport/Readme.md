@@ -1,105 +1,47 @@
-SAP Business One Web Report
+# SAP Business One Web Report
 
-A web-based reporting dashboard for SAP Business One. It shows live company data (sales, purchase, production, finance, inventory) as KPI cards and charts in a browser, and works as a lightweight alternative to Power BI.
+## Overview
+Designed and built a web-based reporting dashboard on SAP Business One 10 (SAP HANA) that shows live KPIs and charts in the browser.
+Includes date and warehouse filters, year-on-year comparison, Excel export and role-based access, as a lightweight alternative to Power BI.
 
-1. In simple words (for non-technical readers)
+## Need for this Web Report
+Managers needed quick, reliable business numbers without manual Excel work or paid per-user BI licences.
+This solution gives one browser-based view of SAP data, so decisions are made on current figures.
 
-The problem: Managers need to see business numbers quickly: how much we sold, what we owe suppliers, how production is going, how much stock we hold. Normally this needs Excel work or a paid BI tool such as Power BI.
+## 6 Web Reports: Business Perspectives
 
-My solution: A web application that connects to SAP Business One and shows these numbers automatically on one screen. A manager opens a link in a browser, picks a date range, and sees the results instantly.
+**1. Sales** – Tracks net sales, gross margin, open orders, overdue receivables and top 10 customers.
+Helps the sales team see revenue trends and the order-to-cash cycle.
 
-What a user can do:
+![Sales](Sales.jpeg)
 
-See key business numbers (KPIs) for Sales, Purchase, Production, Finance and Inventory
-Filter by date range and by warehouse
-Compare this year with the previous year
-Download any report to Excel
-Refresh to get the latest data
-Control who can see which menu (admin feature)
-2. Technical overview
-Item	Details
-ERP	SAP Business One 10
-Database	SAP HANA
-Front end	___
-Back end	___
-Charts	___
-Currency	INR
+**2. Purchase** – Monitors net purchases, open POs, received-not-billed value, payables and top 10 suppliers.
+Helps control procurement spend and supplier dues.
 
-Common features on every screen
+![Purchase](Purchase.png)
 
-Sidebar: Executive, Sales, Purchase, Production, Finance, Inventory, Admin
-Period filter (preset or custom From/To dates)
-Refresh button and "Data as of" timestamp
-Export to Excel
-Tabs inside each menu
-3. Menus and what they report
-Sales
+**3. Production** – Shows planned vs completed quantity, efficiency, delayed orders, yield and material variance.
+Helps the shop floor spot delays and cost overruns early.
 
-Tabs: Sales Overview, Customer Analysis, Item and Product Analysis, Order to Cash
+![Production](Production.png)
 
-KPIs: Net Sales, Gross Margin, Invoices, Average Invoice Value, Orders Booked, Open Sales Orders, Overdue Receivables, Active Customers
-Charts: Monthly net sales vs previous year, Top 10 customers
-Purchase
+**4. Finance** – Reports income, expenses, net profit, cash and bank balance, receivables ageing, DSO and DPO.
+Helps management track profitability and cash position.
 
-Tabs: Purchase Overview, Supplier Analysis, Procurement Pipeline, Price and Variance
+![Finance](Finance.png)
 
-KPIs: Net Purchases, POs Placed, Open PO Value, Received Not Billed, Payables Outstanding, Overdue Payables, Supplier Bills, Active Suppliers
-Charts: Monthly net purchases vs previous year, Top 10 suppliers
-Production
+**5. Inventory** – Covers stock value, turnover, days of inventory, below-minimum and non-moving stock by warehouse.
+Helps reduce excess stock and avoid stock-outs.
 
-Tabs: Production Overview, Production Orders, Material Consumption, Receipts and Issues
+![Inventory](Inventory.png)
 
-KPIs: Production Orders, Planned vs Completed Quantity, Efficiency, Open Orders, Delayed Orders, Yield, Material Variance Cost
-Charts: Planned vs completed quantity by month, Order status
-Finance
+**6. Admin** – Manages users, password resets, menu-level access by role, audit log and connection settings.
+Helps keep sensitive data visible only to the right people.
 
-Tabs: Finance Overview, Receivables and Payables, Cash and Bank, Ledger and P&L
+![Admin](Admin.png)
 
-KPIs: Income, Expenses, Net Profit, Net Profit Margin, Cash and Bank Balance, Receivables, Payables, DSO, DPO
-Charts: Income vs expense by month, Receivables ageing
-Inventory
+## Result
+Replaced manual reporting with a single live dashboard across five business functions, with secure role-based access.
+Delivered at no per-user BI licence cost, needing only a web browser.
 
-Tabs: Inventory Overview, Stock Status, Movement and Transactions, Ageing and Reorder
-
-KPIs: Total Stock Value, Items in Stock, Inward and Outward Value, Stock Turnover, Days of Inventory, Below Minimum Stock, Non-Moving Stock Value
-Charts: Stock value by warehouse, Stock ageing
-Extra filter: Warehouse
-Admin
-
-Tabs: Users and Access, Audit log, Connection
-
-Add users and reset passwords
-Role-based access: choose which menus each user can open
-4. Screenshots
-
-Screenshots use test data.
-
-Sales
-
-Sales
-
-Purchase
-
-Purchase
-
-Production
-
-Production
-
-Finance
-
-Finance
-
-Inventory
-
-Inventory
-
-Admin
-
-Admin
-
-5. Why this instead of Power BI
-No per-user BI licence cost
-Built directly on SAP B1 / HANA data
-Only a web browser is needed
-Menus, KPIs and access rules are designed around business needs
+*Screenshots use test data.*
